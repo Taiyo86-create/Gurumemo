@@ -33,7 +33,7 @@ struct Home: View {
             )
           
           Button {
-            // fetchShopを実行
+            homeViewModel.loadShop()
           } label: {
             Text("検索")
               .font(.headline)
@@ -42,7 +42,6 @@ struct Home: View {
               .background(Color.blue)
               .cornerRadius(10)
           }
-
         }
         .padding()
         Spacer()

@@ -11,12 +11,14 @@ import FirebaseAuth
 class HomeViewModel: ObservableObject {
   @Published var isLogout:Bool = false
   @Published var genre: String = ""
+  @Published var name: String = ""
+  @Published var address: String = ""
+  @Published var imageUrl: String = ""
   
   init() {
-    //    インスタンスが生成されたら認証情報を確認
     observeAuthChanges()
   }
-  
+  //  認証情報を確認
   private func observeAuthChanges() {
     Auth.auth().addStateDidChangeListener { [weak self] _, user in
       DispatchQueue.main.async {
@@ -31,6 +33,15 @@ class HomeViewModel: ObservableObject {
       isLogout = true
     } catch _ as NSError {
       print("エラー")
+    }
+  }
+  func loadShop() {
+    APIClient().fetchShop { name, address, imageUrl in
+      DispatchQueue.main.async {
+        self.name = name
+        self.address = address
+        self.imageUrl = imageUrl
+      }
     }
   }
 }

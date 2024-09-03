@@ -10,11 +10,7 @@ import Alamofire
 import SwiftyJSON
 
 class APIClient {
-  var name: String = ""
-  var address: String = ""
-  var imageURL: String = ""
-  
-  func fetchShop() {
+  func fetchShop(completion: @escaping (String, String, String) -> Void) {
     let apiKey = "f5b83e0df3d9cd01"
     let baseUrl = "https://webservice.recruit.co.jp/hotpepper/gourmet/v1/"
     
@@ -31,12 +27,17 @@ class APIClient {
             let json = JSON(value)
             let shopData = json["results"]["shop"].arrayValue.first
             if let shopData = shopData {
-              self.name = shopData["name"].stringValue
-              self.address = shopData["address"].stringValue
-              self.imageURL = shopData["photo"]["pc"]["l"].stringValue
+              let name = shopData["name"].stringValue
+              let address = shopData["address"].stringValue
+              let imageURL = shopData["photo"]["pc"]["l"].stringValue
+              print("成功: 店舗名: \(name), 住所: \(address), 画像URL: \(imageURL)")
+              // クロージャーを呼び出して結果を返す
+              completion(name, address, imageURL)
             }
           case .failure(let error):
-            print(error)
+            print("API Request Error: \(error)")
+            // エラー時に空の値を返す
+            completion("", "", "")
           }
         }
     }
