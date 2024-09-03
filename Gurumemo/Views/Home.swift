@@ -6,10 +6,13 @@
 //
 
 import SwiftUI
+import MapKit
+import CoreLocation
 
 struct Home: View {
   @State var showLogoutAlert: Bool = false
   @StateObject var homeViewModel = HomeViewModel()
+  @StateObject var locationManager = LocationManager()
   var body: some View {
     NavigationStack {
       VStack {
@@ -31,6 +34,9 @@ struct Home: View {
               RoundedRectangle(cornerRadius: 8)
                 .stroke(Color.gray, lineWidth: 1)
             )
+          
+          Map(coordinateRegion: $locationManager.region, showsUserLocation: true)
+            .frame(height: 300)
           
           Button {
             homeViewModel.loadShop()

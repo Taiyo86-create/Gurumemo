@@ -77,6 +77,7 @@
 		FC312BE32C86FC390045F5ED /* SwiftyJSON.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC312BE22C86FC390045F5ED /* SwiftyJSON.xcframework */; };
 		FC312BE42C86FC390045F5ED /* SwiftyJSON.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FC312BE22C86FC390045F5ED /* SwiftyJSON.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FC312BE62C8710770045F5ED /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC312BE52C8710770045F5ED /* HomeModel.swift */; };
+		FC312BEB2C8735B00045F5ED /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC312BEA2C8735B00045F5ED /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -114,6 +115,7 @@
 		FC312BE22C86FC390045F5ED /* SwiftyJSON.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SwiftyJSON.xcframework; path = Carthage/Build/SwiftyJSON.xcframework; sourceTree = "<group>"; };
 		FC312BE52C8710770045F5ED /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		FC312BE92C8734A20045F5ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		FC312BEA2C8735B00045F5ED /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +239,7 @@
 				FC312B5D2C86AD460045F5ED /* SignUpViewModel.swift */,
 				FC312B5F2C86AD5A0045F5ED /* RessetPasswordViewModel.swift */,
 				FC312BD22C86B1B60045F5ED /* HomeViewModel.swift */,
+				FC312BEA2C8735B00045F5ED /* LocationManager.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -401,6 +404,7 @@
 				FC09F1EB2C86A01F005D4FF7 /* APIClient.swift in Sources */,
 				FC312B662C86ADB00045F5ED /* SignUp.swift in Sources */,
 				FC312B642C86ADA10045F5ED /* RessetPassword.swift in Sources */,
+				FC312BEB2C8735B00045F5ED /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
