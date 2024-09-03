@@ -1,5 +1,5 @@
 //
-//  Login.swift
+//  SignUp.swift
 //  Gurumemo
 //
 //  Created by 水元太陽 on 2024/09/03.
@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct Login: View {
-  @State var email: String = ""
-  @State var password: String = ""
-  @StateObject var loginViewModel = LoginViewModel()
+struct SignUp: View {
+  @State private var email: String = ""
+  @State private var password: String = ""
+  @StateObject var signInViewModel = SignInViewModel()
   var body: some View {
     NavigationStack {
       VStack {
-        Image(systemName: AppConstant.loginLogo)
+        Image(systemName: AppConstant.signUpLogo)
           .resizable()
           .frame(width: 80, height: 80)
           .foregroundColor(.blue)
@@ -28,24 +28,18 @@ struct Login: View {
         SecureField(AppConstant.password, text: $password)
           .textFieldStyle(RoundedBorderTextFieldStyle())
           .padding(.horizontal, 30)
-          .padding(.bottom, 20)
+          .padding(.bottom, 10)
         
         NavigationLink {
-          SignUp().toolbar(.hidden)
+          Login().toolbar(.hidden)
         } label: {
-          Text(AppConstant.linkSignUp)
-        }
-        
-        NavigationLink {
-          RessetPassword()
-        } label: {
-          Text(AppConstant.linkPasswordResset)
+          Text(AppConstant.linkLogin)
         }
         
         Button(action: {
-          loginViewModel.signIn(email: email, password: password)
+          signInViewModel.signUp(email: email, password: password)
         }) {
-          Text(AppConstant.login)
+          Text(AppConstant.signUp)
             .font(.headline)
             .foregroundColor(.white)
             .padding()
@@ -54,20 +48,20 @@ struct Login: View {
             .cornerRadius(10)
             .padding(.horizontal, 30)
         }
-        NavigationLink(
-          destination: Home().toolbar(.hidden),
-          isActive: Binding(
-            get: { loginViewModel.isAuth },
-            set: { loginViewModel.isAuth = $0 }
-          ),
-          label: {
-            EmptyView()
-          })
       }
+      NavigationLink(
+        destination: Home().toolbar(.hidden),
+        isActive: Binding(
+          get: { signInViewModel.isAuth },
+          set: { signInViewModel.isAuth = $0 }
+        ),
+        label: {
+          EmptyView()
+        })
     }
   }
 }
 
 #Preview {
-  Login()
+  SignUp()
 }
