@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct Home: View {
+  @State var showLogoutAlert: Bool = false
   @StateObject var homeViewModel = HomeViewModel()
   var body: some View {
     NavigationStack {
@@ -15,7 +16,7 @@ struct Home: View {
         HStack {
           Spacer()
           Button(action: {
-            homeViewModel.signOut()
+            showLogoutAlert = true
             print(homeViewModel.isLogout)
           }) {
             Image(systemName: AppConstant.logoutIcon)
@@ -27,6 +28,17 @@ struct Home: View {
         }
         .padding()
         Spacer()
+      }
+      .alert(isPresented: $showLogoutAlert) {
+        Alert(
+          title: Text("ログアウトしますか？"),
+          primaryButton: .destructive(Text("はい")) {
+            homeViewModel.signOut()
+          },
+          secondaryButton: .cancel(Text("いいえ")) {
+            showLogoutAlert = false
+          }
+        )
       }
       NavigationLink(
         destination: Login().toolbar(.hidden),
