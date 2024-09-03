@@ -54,11 +54,13 @@ struct Home: View {
               AsyncImage(url: URL(string: homeViewModel.homeModel.imageUrls[index])) { image in
                 image.resizable()
                   .scaledToFit()
+                  .frame(width: 150)
                   .frame(height: 150)
               } placeholder: {
               }
             }
             .padding()
+            .frame(maxWidth: .infinity)
             .overlay(
               RoundedRectangle(cornerRadius: 8)
                 .stroke(Color.gray, lineWidth: 1)
