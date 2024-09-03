@@ -71,6 +71,7 @@
 		FC312BCD2C86AF890045F5ED /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = FC312BCC2C86AF890045F5ED /* FirebaseStorage */; };
 		FC312BCF2C86AF890045F5ED /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = FC312BCE2C86AF890045F5ED /* FirebaseStorageCombine-Community */; };
 		FC312BD12C86AF890045F5ED /* FirebaseVertexAI-Preview in Frameworks */ = {isa = PBXBuildFile; productRef = FC312BD02C86AF890045F5ED /* FirebaseVertexAI-Preview */; };
+		FC312BD32C86B1B60045F5ED /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC312BD22C86B1B60045F5ED /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +89,7 @@
 		FC312B652C86ADB00045F5ED /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		FC312B672C86ADB80045F5ED /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		FC312B742C86AF350045F5ED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FC312BD22C86B1B60045F5ED /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +207,7 @@
 				FC312B5B2C86AD370045F5ED /* LoginViewModel.swift */,
 				FC312B5D2C86AD460045F5ED /* SignUpViewModel.swift */,
 				FC312B5F2C86AD5A0045F5ED /* RessetPasswordViewModel.swift */,
+				FC312BD22C86B1B60045F5ED /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC09F1E92C869FEB005D4FF7 /* AppConstant.swift in Sources */,
+				FC312BD32C86B1B60045F5ED /* HomeViewModel.swift in Sources */,
 				FC09F1D42C869D41005D4FF7 /* GurumemoApp.swift in Sources */,
 				FC312B682C86ADB80045F5ED /* Home.swift in Sources */,
 				FC09F1E72C869F8A005D4FF7 /* Login.swift in Sources */,

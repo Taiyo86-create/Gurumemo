@@ -20,4 +20,7 @@ struct AppConstant {
   static let signUp = "会員登録"
   static let registerEmail = "登録したメールアドレス"
   static let submitEmail = "送信"
+  
+  //  Home画面の固定文言
+  static let logoutIcon = "rectangle.portrait.and.arrow.right"
 }
