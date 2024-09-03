@@ -14,6 +14,7 @@ class HomeViewModel: ObservableObject {
   @Published var name: String = ""
   @Published var address: String = ""
   @Published var imageUrl: String = ""
+  @Published var isloading: Bool = false
   
   init() {
     observeAuthChanges()
@@ -36,12 +37,13 @@ class HomeViewModel: ObservableObject {
     }
   }
   func loadShop() {
-    APIClient().fetchShop { name, address, imageUrl in
+    APIClient().fetchShop(keyword: genre) { name, address, imageUrl in
       DispatchQueue.main.async {
         self.name = name
         self.address = address
         self.imageUrl = imageUrl
       }
     }
+    isloading = true
   }
 }

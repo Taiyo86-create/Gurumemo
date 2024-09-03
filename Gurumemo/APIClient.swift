@@ -6,18 +6,18 @@
 //
 
 import Foundation
-import Alamofire
 import SwiftyJSON
+import Alamofire
 
 class APIClient {
-  func fetchShop(completion: @escaping (String, String, String) -> Void) {
+  func fetchShop(keyword: String, completion: @escaping (String, String, String) -> Void) {
     let apiKey = "f5b83e0df3d9cd01"
     let baseUrl = "https://webservice.recruit.co.jp/hotpepper/gourmet/v1/"
     
     let apiKeyEncoded = apiKey.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
-    let keywordEncoded = "パスタ".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+    let keywordEncoded = keyword.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
     
-    let urlString = "\(baseUrl)?key=\(apiKeyEncoded)&large_area=Z011&format=json&count=1&keyword=\(keywordEncoded)"
+    let urlString = "\(baseUrl)?key=\(apiKeyEncoded)&large_area=Z011&format=json&count=10&keyword=\(keywordEncoded)"
     
     if let url = URL(string: urlString) {
       AF.request(url)
