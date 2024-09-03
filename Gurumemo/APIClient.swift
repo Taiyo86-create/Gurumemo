@@ -10,5 +10,12 @@ import Alamofire
 import SwiftyJSON
 
 class APIClient {
-  //  API通信のクラス
+  
+  func fetchShop() {
+    let apiKey = "f5b83e0df3d9cd01"
+    let baseUrl = "https://webservice.recruit.co.jp/hotpepper/gourmet/v1/"
+    
+    let apiKeyEncoded = apiKey.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+    let keywordEncoded = "ラーメン".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+  }
 }
