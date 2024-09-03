@@ -1,0 +1,17 @@
+.DS_Store
+*/build/
+*.xcuserdatad
+*.xcuserdata
+*.xcworkspace
+*.xcodeproj/project.xcworkspace/
+*.xcodeproj/xcuserdata/
+*.xcodeproj/xcshareddata/.*
+
+# Swift Package Manager
+/.build/
+DerivedData
+.idea/
+Pods/
+
+# Logs
+*.log
