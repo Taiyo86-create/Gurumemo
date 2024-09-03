@@ -28,14 +28,14 @@ struct Home: View {
           }
         }
         VStack {
-          TextField("何が食べたい？", text: $homeViewModel.genre)
+          TextField(AppConstant.wantEat, text: $homeViewModel.genre)
             .padding()
             .overlay(
               RoundedRectangle(cornerRadius: 8)
                 .stroke(Color.gray, lineWidth: 1)
             )
           
-          Text("どのへん？")
+          Text(AppConstant.whereEat)
           
           Map(coordinateRegion: $locationManager.region, showsUserLocation: true)
             .frame(height: 300)
@@ -43,7 +43,7 @@ struct Home: View {
           Button {
             homeViewModel.loadShop()
           } label: {
-            Text("検索")
+            Text(AppConstant.search)
               .font(.headline)
               .foregroundColor(.white)
               .padding()
@@ -85,11 +85,11 @@ struct Home: View {
       }
       .alert(isPresented: $showLogoutAlert) {
         Alert(
-          title: Text("ログアウトしますか？"),
-          primaryButton: .destructive(Text("はい")) {
+          title: Text(AppConstant.promptLogout),
+          primaryButton: .destructive(Text(AppConstant.yesButton)) {
             homeViewModel.signOut()
           },
-          secondaryButton: .cancel(Text("いいえ")) {
+          secondaryButton: .cancel(Text(AppConstant.noButton)) {
             showLogoutAlert = false
           }
         )

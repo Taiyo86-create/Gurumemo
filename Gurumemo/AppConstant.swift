@@ -23,4 +23,11 @@ struct AppConstant {
   
   //  Home画面の固定文言
   static let logoutIcon = "rectangle.portrait.and.arrow.right"
+  static let wantEat = "何が食べたい?"
+  static let whereEat = "どのへん？"
+  static let search = "検索"
+  static let promptLogout = "ログアウトしますか？"
+  static let yesButton = "はい"
+  static let noButton = "いいえ"
+  
 }
