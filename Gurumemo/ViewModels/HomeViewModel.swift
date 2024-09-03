@@ -10,6 +10,7 @@ import FirebaseAuth
 
 class HomeViewModel: ObservableObject {
   @Published var isLogout:Bool = false
+  @Published var genre: String = ""
   
   init() {
     //    インスタンスが生成されたら認証情報を確認

@@ -25,6 +25,24 @@ struct Home: View {
           }
         }
         VStack {
+          TextField("何が食べたい？", text: $homeViewModel.genre)
+            .padding()
+            .overlay(
+              RoundedRectangle(cornerRadius: 8)
+                .stroke(Color.gray, lineWidth: 1)
+            )
+          
+          Button {
+            
+          } label: {
+            Text("検索")
+              .font(.headline)
+              .foregroundColor(.white)
+              .padding()
+              .background(Color.blue)
+              .cornerRadius(10)
+          }
+
         }
         .padding()
         Spacer()
