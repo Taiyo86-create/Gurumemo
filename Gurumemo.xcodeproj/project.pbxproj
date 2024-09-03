@@ -72,7 +72,26 @@
 		FC312BCF2C86AF890045F5ED /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = FC312BCE2C86AF890045F5ED /* FirebaseStorageCombine-Community */; };
 		FC312BD12C86AF890045F5ED /* FirebaseVertexAI-Preview in Frameworks */ = {isa = PBXBuildFile; productRef = FC312BD02C86AF890045F5ED /* FirebaseVertexAI-Preview */; };
 		FC312BD32C86B1B60045F5ED /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC312BD22C86B1B60045F5ED /* HomeViewModel.swift */; };
+		FC312BDF2C86FC170045F5ED /* Alamofire.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC312BDE2C86FC170045F5ED /* Alamofire.xcframework */; };
+		FC312BE02C86FC170045F5ED /* Alamofire.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FC312BDE2C86FC170045F5ED /* Alamofire.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FC312BE32C86FC390045F5ED /* SwiftyJSON.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC312BE22C86FC390045F5ED /* SwiftyJSON.xcframework */; };
+		FC312BE42C86FC390045F5ED /* SwiftyJSON.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FC312BE22C86FC390045F5ED /* SwiftyJSON.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FC312BE12C86FC170045F5ED /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FC312BE02C86FC170045F5ED /* Alamofire.xcframework in Embed Frameworks */,
+				FC312BE42C86FC390045F5ED /* SwiftyJSON.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		FC09F1D02C869D41005D4FF7 /* Gurumemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gurumemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +109,8 @@
 		FC312B672C86ADB80045F5ED /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		FC312B742C86AF350045F5ED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FC312BD22C86B1B60045F5ED /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		FC312BDE2C86FC170045F5ED /* Alamofire.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Alamofire.xcframework; path = Carthage/Build/Alamofire.xcframework; sourceTree = "<group>"; };
+		FC312BE22C86FC390045F5ED /* SwiftyJSON.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SwiftyJSON.xcframework; path = Carthage/Build/SwiftyJSON.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC312BE32C86FC390045F5ED /* SwiftyJSON.xcframework in Frameworks */,
 				FC312B712C86AE2D0045F5ED /* FirebaseAppCheck in Frameworks */,
 				FC312BC12C86AF890045F5ED /* FirebaseInAppMessaging-Beta in Frameworks */,
 				FC312B6B2C86AE2D0045F5ED /* FirebaseAnalytics in Frameworks */,
@@ -117,6 +139,7 @@
 				FC312BB92C86AF890045F5ED /* FirebaseFirestore in Frameworks */,
 				FC312B912C86AF6B0045F5ED /* FirebaseFunctionsCombine-Community in Frameworks */,
 				FC312B9B2C86AF6B0045F5ED /* FirebasePerformance in Frameworks */,
+				FC312BDF2C86FC170045F5ED /* Alamofire.xcframework in Frameworks */,
 				FC312BAB2C86AF890045F5ED /* FirebaseAppCheck in Frameworks */,
 				FC312BA92C86AF890045F5ED /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 				FC312B852C86AF6B0045F5ED /* FirebaseCrashlytics in Frameworks */,
@@ -159,6 +182,7 @@
 			children = (
 				FC09F1D22C869D41005D4FF7 /* Gurumemo */,
 				FC09F1D12C869D41005D4FF7 /* Products */,
+				FC312BDD2C86FC170045F5ED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -223,6 +247,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		FC312BDD2C86FC170045F5ED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC312BE22C86FC390045F5ED /* SwiftyJSON.xcframework */,
+				FC312BDE2C86FC170045F5ED /* Alamofire.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -233,6 +266,7 @@
 				FC09F1CC2C869D41005D4FF7 /* Sources */,
 				FC09F1CD2C869D41005D4FF7 /* Frameworks */,
 				FC09F1CE2C869D41005D4FF7 /* Resources */,
+				FC312BE12C86FC170045F5ED /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

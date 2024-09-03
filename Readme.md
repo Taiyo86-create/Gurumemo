@@ -26,3 +26,10 @@ https://zenn.dev/joo_hashi/articles/3e28d2f6e46674
 https://qiita.com/nakagawa1017/items/44d206c2d4bee8511818
 
 ### API
+**公式**
+
+https://webservice.recruit.co.jp/doc/hotpepper/reference.html
+
+**参考**
+
+https://qiita.com/yasu-ya/items/6b962c8729e9a4e69b9c
