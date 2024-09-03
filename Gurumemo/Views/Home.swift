@@ -44,6 +44,27 @@ struct Home: View {
           }
         }
         .padding()
+        ScrollView {
+          ForEach(homeViewModel.homeModel.names.indices, id: \.self) { index in
+            VStack(alignment: .leading) {
+              Text(homeViewModel.homeModel.names[index])
+                .font(.headline)
+              Text(homeViewModel.homeModel.addresses[index])
+                .font(.subheadline)
+              AsyncImage(url: URL(string: homeViewModel.homeModel.imageUrls[index])) { image in
+                image.resizable()
+                  .scaledToFit()
+                  .frame(height: 150)
+              } placeholder: {
+              }
+            }
+            .padding()
+            .overlay(
+              RoundedRectangle(cornerRadius: 8)
+                .stroke(Color.gray, lineWidth: 1)
+            )
+          }
+        }
         Spacer()
       }
       .alert(isPresented: $showLogoutAlert) {
