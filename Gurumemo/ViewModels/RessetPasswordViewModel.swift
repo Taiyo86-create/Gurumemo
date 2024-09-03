@@ -6,3 +6,15 @@
 //
 
 import Foundation
+import FirebaseAuth
+
+class RessetPasswordViewModel: ObservableObject {
+  //  パスワードをリセットする関数
+  func resetPassword(email: String) {
+    Auth.auth().sendPasswordReset(withEmail: email) { error in
+      if error != nil {
+        print("error")
+      }
+    }
+  }
+}
