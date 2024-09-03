@@ -31,10 +31,10 @@ class HomeViewModel: ObservableObject {
       try Auth.auth().signOut()
       isLogout = true
     } catch _ as NSError {
-      print("エラー")
     }
   }
   func loadShop() {
+    isloading = false
     APIClient().fetchShop(keyword: genre) { names, addresses, imageUrls in
       DispatchQueue.main.async {
         self.homeModel = HomeModel(names: names, addresses: addresses, imageUrls: imageUrls)

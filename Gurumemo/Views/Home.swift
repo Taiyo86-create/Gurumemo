@@ -35,6 +35,8 @@ struct Home: View {
                 .stroke(Color.gray, lineWidth: 1)
             )
           
+          Text("どのへん？")
+          
           Map(coordinateRegion: $locationManager.region, showsUserLocation: true)
             .frame(height: 300)
           
@@ -50,28 +52,34 @@ struct Home: View {
           }
         }
         .padding()
-        ScrollView {
-          ForEach(homeViewModel.homeModel.names.indices, id: \.self) { index in
-            VStack(alignment: .leading) {
-              Text(homeViewModel.homeModel.names[index])
-                .font(.headline)
-              Text(homeViewModel.homeModel.addresses[index])
-                .font(.subheadline)
-              AsyncImage(url: URL(string: homeViewModel.homeModel.imageUrls[index])) { image in
-                image.resizable()
-                  .scaledToFit()
-                  .frame(width: 150)
-                  .frame(height: 150)
-              } placeholder: {
+        if homeViewModel.isloading {
+          ScrollView {
+            ForEach(homeViewModel.homeModel.names.indices, id: \.self) { index in
+              VStack(alignment: .leading) {
+                Text(homeViewModel.homeModel.names[index])
+                  .font(.headline)
+                Text(homeViewModel.homeModel.addresses[index])
+                  .font(.subheadline)
+                AsyncImage(url: URL(string: homeViewModel.homeModel.imageUrls[index])) { image in
+                  image.resizable()
+                    .scaledToFit()
+                    .frame(width: 150)
+                    .frame(height: 150)
+                } placeholder: {
+                }
               }
+              .padding()
+              .frame(maxWidth: .infinity)
+              .overlay(
+                RoundedRectangle(cornerRadius: 8)
+                  .stroke(Color.gray, lineWidth: 1)
+              )
             }
-            .padding()
-            .frame(maxWidth: .infinity)
-            .overlay(
-              RoundedRectangle(cornerRadius: 8)
-                .stroke(Color.gray, lineWidth: 1)
-            )
           }
+        } else {
+          ProgressView()
+            .progressViewStyle(CircularProgressViewStyle())
+            .tint(.blue)
         }
         Spacer()
       }
@@ -86,6 +94,9 @@ struct Home: View {
           }
         )
       }
+      .onAppear {
+        homeViewModel.isloading = true
+      }
       NavigationLink(
         destination: Login().toolbar(.hidden),
         isActive: Binding(
@@ -97,8 +108,4 @@ struct Home: View {
         })
     }
   }
-}
-
-#Preview {
-  Home()
 }
