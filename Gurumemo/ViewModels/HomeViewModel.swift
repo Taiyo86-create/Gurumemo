@@ -11,9 +11,7 @@ import FirebaseAuth
 class HomeViewModel: ObservableObject {
   @Published var isLogout:Bool = false
   @Published var genre: String = ""
-  @Published var names: [String] = []
-  @Published var addresses: [String] = []
-  @Published var imageUrls: [String] = []
+  @Published var homeModel = HomeModel()
   @Published var isloading: Bool = false
   
   init() {
@@ -39,10 +37,9 @@ class HomeViewModel: ObservableObject {
   func loadShop() {
     APIClient().fetchShop(keyword: genre) { names, addresses, imageUrls in
       DispatchQueue.main.async {
-        self.names = names
-        self.addresses = addresses
-        self.imageUrls = imageUrls
+        self.homeModel = HomeModel(names: names, addresses: addresses, imageUrls: imageUrls)
       }
     }
+    isloading = true
   }
 }

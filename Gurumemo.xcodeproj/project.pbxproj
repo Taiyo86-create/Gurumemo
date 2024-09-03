@@ -76,6 +76,7 @@
 		FC312BE02C86FC170045F5ED /* Alamofire.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FC312BDE2C86FC170045F5ED /* Alamofire.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FC312BE32C86FC390045F5ED /* SwiftyJSON.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC312BE22C86FC390045F5ED /* SwiftyJSON.xcframework */; };
 		FC312BE42C86FC390045F5ED /* SwiftyJSON.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FC312BE22C86FC390045F5ED /* SwiftyJSON.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FC312BE62C8710770045F5ED /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC312BE52C8710770045F5ED /* HomeModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -111,6 +112,7 @@
 		FC312BD22C86B1B60045F5ED /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		FC312BDE2C86FC170045F5ED /* Alamofire.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Alamofire.xcframework; path = Carthage/Build/Alamofire.xcframework; sourceTree = "<group>"; };
 		FC312BE22C86FC390045F5ED /* SwiftyJSON.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SwiftyJSON.xcframework; path = Carthage/Build/SwiftyJSON.xcframework; sourceTree = "<group>"; };
+		FC312BE52C8710770045F5ED /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,6 +223,7 @@
 		FC09F1E12C869F24005D4FF7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FC312BE52C8710770045F5ED /* HomeModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -392,6 +395,7 @@
 				FC312B5C2C86AD370045F5ED /* LoginViewModel.swift in Sources */,
 				FC312B5E2C86AD460045F5ED /* SignUpViewModel.swift in Sources */,
 				FC312B602C86AD5A0045F5ED /* RessetPasswordViewModel.swift in Sources */,
+				FC312BE62C8710770045F5ED /* HomeModel.swift in Sources */,
 				FC09F1EB2C86A01F005D4FF7 /* APIClient.swift in Sources */,
 				FC312B662C86ADB00045F5ED /* SignUp.swift in Sources */,
 				FC312B642C86ADA10045F5ED /* RessetPassword.swift in Sources */,
