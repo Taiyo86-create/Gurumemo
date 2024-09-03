@@ -113,6 +113,7 @@
 		FC312BDE2C86FC170045F5ED /* Alamofire.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Alamofire.xcframework; path = Carthage/Build/Alamofire.xcframework; sourceTree = "<group>"; };
 		FC312BE22C86FC390045F5ED /* SwiftyJSON.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SwiftyJSON.xcframework; path = Carthage/Build/SwiftyJSON.xcframework; sourceTree = "<group>"; };
 		FC312BE52C8710770045F5ED /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		FC312BE92C8734A20045F5ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +200,7 @@
 		FC09F1D22C869D41005D4FF7 /* Gurumemo */ = {
 			isa = PBXGroup;
 			children = (
+				FC312BE92C8734A20045F5ED /* Info.plist */,
 				FC312B742C86AF350045F5ED /* GoogleService-Info.plist */,
 				FC09F1E82C869FEB005D4FF7 /* AppConstant.swift */,
 				FC09F1EA2C86A01F005D4FF7 /* APIClient.swift */,
@@ -535,6 +537,7 @@
 				DEVELOPMENT_TEAM = P97LMAHA9N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Gurumemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -564,6 +567,7 @@
 				DEVELOPMENT_TEAM = P97LMAHA9N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Gurumemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
