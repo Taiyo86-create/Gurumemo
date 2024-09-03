@@ -33,7 +33,7 @@ struct Home: View {
             )
           
           Button {
-            
+            // fetchShopを実行
           } label: {
             Text("検索")
               .font(.headline)
