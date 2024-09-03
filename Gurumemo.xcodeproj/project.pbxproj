@@ -17,6 +17,9 @@
 		FC312B5C2C86AD370045F5ED /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC312B5B2C86AD370045F5ED /* LoginViewModel.swift */; };
 		FC312B5E2C86AD460045F5ED /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC312B5D2C86AD460045F5ED /* SignUpViewModel.swift */; };
 		FC312B602C86AD5A0045F5ED /* RessetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC312B5F2C86AD5A0045F5ED /* RessetPasswordViewModel.swift */; };
+		FC312B642C86ADA10045F5ED /* RessetPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC312B632C86ADA10045F5ED /* RessetPassword.swift */; };
+		FC312B662C86ADB00045F5ED /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC312B652C86ADB00045F5ED /* SignUp.swift */; };
+		FC312B682C86ADB80045F5ED /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC312B672C86ADB80045F5ED /* Home.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,9 @@
 		FC312B5B2C86AD370045F5ED /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		FC312B5D2C86AD460045F5ED /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		FC312B5F2C86AD5A0045F5ED /* RessetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RessetPasswordViewModel.swift; sourceTree = "<group>"; };
+		FC312B632C86ADA10045F5ED /* RessetPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RessetPassword.swift; sourceTree = "<group>"; };
+		FC312B652C86ADB00045F5ED /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
+		FC312B672C86ADB80045F5ED /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,9 @@
 			isa = PBXGroup;
 			children = (
 				FC09F1E62C869F8A005D4FF7 /* Login.swift */,
+				FC312B632C86ADA10045F5ED /* RessetPassword.swift */,
+				FC312B652C86ADB00045F5ED /* SignUp.swift */,
+				FC312B672C86ADB80045F5ED /* Home.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -182,11 +191,14 @@
 			files = (
 				FC09F1E92C869FEB005D4FF7 /* AppConstant.swift in Sources */,
 				FC09F1D42C869D41005D4FF7 /* GurumemoApp.swift in Sources */,
+				FC312B682C86ADB80045F5ED /* Home.swift in Sources */,
 				FC09F1E72C869F8A005D4FF7 /* Login.swift in Sources */,
 				FC312B5C2C86AD370045F5ED /* LoginViewModel.swift in Sources */,
 				FC312B5E2C86AD460045F5ED /* SignUpViewModel.swift in Sources */,
 				FC312B602C86AD5A0045F5ED /* RessetPasswordViewModel.swift in Sources */,
 				FC09F1EB2C86A01F005D4FF7 /* APIClient.swift in Sources */,
+				FC312B662C86ADB00045F5ED /* SignUp.swift in Sources */,
+				FC312B642C86ADA10045F5ED /* RessetPassword.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
