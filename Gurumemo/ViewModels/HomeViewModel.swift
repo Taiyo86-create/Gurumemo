@@ -9,15 +9,28 @@ import Foundation
 import FirebaseAuth
 
 class HomeViewModel: ObservableObject {
-  @Published var isLogout:Bool = false
+  @Published var isLogout: Bool = false
   @Published var genre: String = ""
   @Published var homeModel = HomeModel()
-  @Published var isloading: Bool = false
+  @Published var isLoading: Bool = false
+  
+  // 新しい状態変数
+  @Published var selectedCreditCard = "Visa"
+  @Published var selectedBudget = "2000円以下"
+  @Published var selectedWifi = "あり"
+  @Published var selectedFreeDrink = "なし"
+  @Published var selectedFreeFood = "なし"
+  
+  let creditCardOptions = ["Visa", "MasterCard", "American Express"]
+  let budgetOptions = ["2000円以下", "2000円〜5000円", "5000円以上"]
+  let wifiOptions = ["あり", "なし"]
+  let freeDrinkOptions = ["あり", "なし"]
+  let freeFoodOptions = ["あり", "なし"]
   
   init() {
     observeAuthChanges()
   }
-  //  認証情報を確認
+  
   private func observeAuthChanges() {
     Auth.auth().addStateDidChangeListener { [weak self] _, user in
       DispatchQueue.main.async {
@@ -25,7 +38,7 @@ class HomeViewModel: ObservableObject {
       }
     }
   }
-  //  ログアウトのメソッド
+  
   func signOut() {
     do {
       try Auth.auth().signOut()
@@ -33,13 +46,14 @@ class HomeViewModel: ObservableObject {
     } catch _ as NSError {
     }
   }
+  
   func loadShop() {
-    isloading = false
+    isLoading = false
     APIClient().fetchShop(keyword: genre) { names, addresses, imageUrls in
       DispatchQueue.main.async {
         self.homeModel = HomeModel(names: names, addresses: addresses, imageUrls: imageUrls)
       }
     }
-    isloading = true
+    isLoading = true
   }
 }

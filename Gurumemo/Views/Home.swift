@@ -7,21 +7,11 @@
 
 import SwiftUI
 
+import SwiftUI
+
 struct Home: View {
   @State var showLogoutAlert: Bool = false
   @StateObject var homeViewModel = HomeViewModel()
-  
-  @State private var selectedCreditCard = "Visa"
-  @State private var selectedBudget = "2000円以下"
-  @State private var selectedWifi = "あり"
-  @State private var selectedFreeDrink = "なし"
-  @State private var selectedFreeFood = "なし"
-  
-  let creditCardOptions = ["Visa", "MasterCard", "American Express"]
-  let budgetOptions = ["2000円以下", "2000円〜5000円", "5000円以上"]
-  let wifiOptions = ["あり", "なし"]
-  let freeDrinkOptions = ["あり", "なし"]
-  let freeFoodOptions = ["あり", "なし"]
   
   var body: some View {
     NavigationStack {
@@ -50,8 +40,8 @@ struct Home: View {
           VStack(alignment: .leading) {
             Text("クレジットカード")
               .font(.headline)
-            Picker("クレジットカード", selection: $selectedCreditCard) {
-              ForEach(creditCardOptions, id: \.self) {
+            Picker("クレジットカード", selection: $homeViewModel.selectedCreditCard) {
+              ForEach(homeViewModel.creditCardOptions, id: \.self) {
                 Text($0)
               }
             }
@@ -64,8 +54,8 @@ struct Home: View {
           VStack(alignment: .leading) {
             Text("予算")
               .font(.headline)
-            Picker("予算", selection: $selectedBudget) {
-              ForEach(budgetOptions, id: \.self) {
+            Picker("予算", selection: $homeViewModel.selectedBudget) {
+              ForEach(homeViewModel.budgetOptions, id: \.self) {
                 Text($0)
               }
             }
@@ -78,8 +68,8 @@ struct Home: View {
           VStack(alignment: .leading) {
             Text("Wi-Fiの有無")
               .font(.headline)
-            Picker("Wi-Fi", selection: $selectedWifi) {
-              ForEach(wifiOptions, id: \.self) {
+            Picker("Wi-Fi", selection: $homeViewModel.selectedWifi) {
+              ForEach(homeViewModel.wifiOptions, id: \.self) {
                 Text($0)
               }
             }
@@ -91,8 +81,8 @@ struct Home: View {
           VStack(alignment: .leading) {
             Text("飲み放題")
               .font(.headline)
-            Picker("飲み放題", selection: $selectedFreeDrink) {
-              ForEach(freeDrinkOptions, id: \.self) {
+            Picker("飲み放題", selection: $homeViewModel.selectedFreeDrink) {
+              ForEach(homeViewModel.freeDrinkOptions, id: \.self) {
                 Text($0)
               }
             }
@@ -104,8 +94,8 @@ struct Home: View {
           VStack(alignment: .leading) {
             Text("食べ放題")
               .font(.headline)
-            Picker("食べ放題", selection: $selectedFreeFood) {
-              ForEach(freeFoodOptions, id: \.self) {
+            Picker("食べ放題", selection: $homeViewModel.selectedFreeFood) {
+              ForEach(homeViewModel.freeFoodOptions, id: \.self) {
                 Text($0)
               }
             }
@@ -140,7 +130,7 @@ struct Home: View {
         )
       }
       .onAppear {
-        homeViewModel.isloading = true
+        homeViewModel.isLoading = true
       }
       NavigationLink(
         destination: Login().toolbar(.hidden),
