@@ -7,7 +7,6 @@
 
 import SwiftUI
 import MapKit
-import CoreLocation
 
 struct Home: View {
   @State var showLogoutAlert: Bool = false
@@ -37,7 +36,10 @@ struct Home: View {
           
           Text(AppConstant.whereEat)
           
-          Map(coordinateRegion: $locationManager.region, showsUserLocation: true)
+          Map(coordinateRegion: locationManager.region,
+              showsUserLocation: true,
+              userTrackingMode: $trackingMode
+          )
             .frame(height: 300)
           
           Button {
