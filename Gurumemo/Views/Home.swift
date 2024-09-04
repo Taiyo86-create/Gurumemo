@@ -6,11 +6,23 @@
 //
 
 import SwiftUI
-import MapKit
 
 struct Home: View {
   @State var showLogoutAlert: Bool = false
   @StateObject var homeViewModel = HomeViewModel()
+  
+  @State private var selectedCreditCard = "Visa"
+  @State private var selectedBudget = "2000円以下"
+  @State private var selectedWifi = "あり"
+  @State private var selectedFreeDrink = "なし"
+  @State private var selectedFreeFood = "なし"
+  
+  let creditCardOptions = ["Visa", "MasterCard", "American Express"]
+  let budgetOptions = ["2000円以下", "2000円〜5000円", "5000円以上"]
+  let wifiOptions = ["あり", "なし"]
+  let freeDrinkOptions = ["あり", "なし"]
+  let freeFoodOptions = ["あり", "なし"]
+  
   var body: some View {
     NavigationStack {
       VStack {
@@ -18,14 +30,15 @@ struct Home: View {
           Spacer()
           Button(action: {
             showLogoutAlert = true
-            print(homeViewModel.isLogout)
           }) {
             Image(systemName: AppConstant.logoutIcon)
               .font(.system(size: 25))
               .padding()
           }
         }
-        VStack {
+        
+        VStack(spacing: 20) {
+          // ジャンルの入力フィールド
           TextField(AppConstant.wantEat, text: $homeViewModel.genre)
             .padding()
             .overlay(
@@ -33,8 +46,74 @@ struct Home: View {
                 .stroke(Color.gray, lineWidth: 1)
             )
           
+          // クレジットカードの選択
+          VStack(alignment: .leading) {
+            Text("クレジットカード")
+              .font(.headline)
+            Picker("クレジットカード", selection: $selectedCreditCard) {
+              ForEach(creditCardOptions, id: \.self) {
+                Text($0)
+              }
+            }
+            .pickerStyle(MenuPickerStyle())
+            .padding()
+            .background(RoundedRectangle(cornerRadius: 8).stroke(Color.gray, lineWidth: 1))
+          }
           
+          // 予算の選択
+          VStack(alignment: .leading) {
+            Text("予算")
+              .font(.headline)
+            Picker("予算", selection: $selectedBudget) {
+              ForEach(budgetOptions, id: \.self) {
+                Text($0)
+              }
+            }
+            .pickerStyle(MenuPickerStyle())
+            .padding()
+            .background(RoundedRectangle(cornerRadius: 8).stroke(Color.gray, lineWidth: 1))
+          }
           
+          // Wi-Fiの選択
+          VStack(alignment: .leading) {
+            Text("Wi-Fiの有無")
+              .font(.headline)
+            Picker("Wi-Fi", selection: $selectedWifi) {
+              ForEach(wifiOptions, id: \.self) {
+                Text($0)
+              }
+            }
+            .pickerStyle(SegmentedPickerStyle())
+            .padding()
+          }
+          
+          // 飲み放題の選択
+          VStack(alignment: .leading) {
+            Text("飲み放題")
+              .font(.headline)
+            Picker("飲み放題", selection: $selectedFreeDrink) {
+              ForEach(freeDrinkOptions, id: \.self) {
+                Text($0)
+              }
+            }
+            .pickerStyle(SegmentedPickerStyle())
+            .padding()
+          }
+          
+          // 食べ放題の選択
+          VStack(alignment: .leading) {
+            Text("食べ放題")
+              .font(.headline)
+            Picker("食べ放題", selection: $selectedFreeFood) {
+              ForEach(freeFoodOptions, id: \.self) {
+                Text($0)
+              }
+            }
+            .pickerStyle(SegmentedPickerStyle())
+            .padding()
+          }
+          
+          // 検索ボタン
           Button {
             homeViewModel.loadShop()
           } label: {
