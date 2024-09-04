@@ -34,5 +34,5 @@ struct AppConstant {
   static let wifiTitle = "Wi-Fiの有無"
   static let freeDrinkTitle = "飲み放題"
   static let freeFoodTitle = "食べ放題"
-  
+  static let linkSerchMap = "どのへん？"
 }
