@@ -71,7 +71,30 @@
 		FC312BCD2C86AF890045F5ED /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = FC312BCC2C86AF890045F5ED /* FirebaseStorage */; };
 		FC312BCF2C86AF890045F5ED /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = FC312BCE2C86AF890045F5ED /* FirebaseStorageCombine-Community */; };
 		FC312BD12C86AF890045F5ED /* FirebaseVertexAI-Preview in Frameworks */ = {isa = PBXBuildFile; productRef = FC312BD02C86AF890045F5ED /* FirebaseVertexAI-Preview */; };
+		FC312BD32C86B1B60045F5ED /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC312BD22C86B1B60045F5ED /* HomeViewModel.swift */; };
+		FC312BDF2C86FC170045F5ED /* Alamofire.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC312BDE2C86FC170045F5ED /* Alamofire.xcframework */; };
+		FC312BE02C86FC170045F5ED /* Alamofire.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FC312BDE2C86FC170045F5ED /* Alamofire.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FC312BE32C86FC390045F5ED /* SwiftyJSON.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC312BE22C86FC390045F5ED /* SwiftyJSON.xcframework */; };
+		FC312BE42C86FC390045F5ED /* SwiftyJSON.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FC312BE22C86FC390045F5ED /* SwiftyJSON.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FC312BE62C8710770045F5ED /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC312BE52C8710770045F5ED /* HomeModel.swift */; };
+		FC312BEB2C8735B00045F5ED /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC312BEA2C8735B00045F5ED /* LocationManager.swift */; };
+		FC312BEF2C888E380045F5ED /* SearchMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC312BEE2C888E380045F5ED /* SearchMap.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FC312BE12C86FC170045F5ED /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FC312BE02C86FC170045F5ED /* Alamofire.xcframework in Embed Frameworks */,
+				FC312BE42C86FC390045F5ED /* SwiftyJSON.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		FC09F1D02C869D41005D4FF7 /* Gurumemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gurumemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +111,13 @@
 		FC312B652C86ADB00045F5ED /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		FC312B672C86ADB80045F5ED /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		FC312B742C86AF350045F5ED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FC312BD22C86B1B60045F5ED /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		FC312BDE2C86FC170045F5ED /* Alamofire.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Alamofire.xcframework; path = Carthage/Build/Alamofire.xcframework; sourceTree = "<group>"; };
+		FC312BE22C86FC390045F5ED /* SwiftyJSON.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SwiftyJSON.xcframework; path = Carthage/Build/SwiftyJSON.xcframework; sourceTree = "<group>"; };
+		FC312BE52C8710770045F5ED /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		FC312BE92C8734A20045F5ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		FC312BEA2C8735B00045F5ED /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		FC312BEE2C888E380045F5ED /* SearchMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMap.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC312BE32C86FC390045F5ED /* SwiftyJSON.xcframework in Frameworks */,
 				FC312B712C86AE2D0045F5ED /* FirebaseAppCheck in Frameworks */,
 				FC312BC12C86AF890045F5ED /* FirebaseInAppMessaging-Beta in Frameworks */,
 				FC312B6B2C86AE2D0045F5ED /* FirebaseAnalytics in Frameworks */,
@@ -115,6 +146,7 @@
 				FC312BB92C86AF890045F5ED /* FirebaseFirestore in Frameworks */,
 				FC312B912C86AF6B0045F5ED /* FirebaseFunctionsCombine-Community in Frameworks */,
 				FC312B9B2C86AF6B0045F5ED /* FirebasePerformance in Frameworks */,
+				FC312BDF2C86FC170045F5ED /* Alamofire.xcframework in Frameworks */,
 				FC312BAB2C86AF890045F5ED /* FirebaseAppCheck in Frameworks */,
 				FC312BA92C86AF890045F5ED /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 				FC312B852C86AF6B0045F5ED /* FirebaseCrashlytics in Frameworks */,
@@ -157,6 +189,7 @@
 			children = (
 				FC09F1D22C869D41005D4FF7 /* Gurumemo */,
 				FC09F1D12C869D41005D4FF7 /* Products */,
+				FC312BDD2C86FC170045F5ED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -171,6 +204,7 @@
 		FC09F1D22C869D41005D4FF7 /* Gurumemo */ = {
 			isa = PBXGroup;
 			children = (
+				FC312BE92C8734A20045F5ED /* Info.plist */,
 				FC312B742C86AF350045F5ED /* GoogleService-Info.plist */,
 				FC09F1E82C869FEB005D4FF7 /* AppConstant.swift */,
 				FC09F1EA2C86A01F005D4FF7 /* APIClient.swift */,
@@ -195,6 +229,7 @@
 		FC09F1E12C869F24005D4FF7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FC312BE52C8710770045F5ED /* HomeModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -205,6 +240,8 @@
 				FC312B5B2C86AD370045F5ED /* LoginViewModel.swift */,
 				FC312B5D2C86AD460045F5ED /* SignUpViewModel.swift */,
 				FC312B5F2C86AD5A0045F5ED /* RessetPasswordViewModel.swift */,
+				FC312BD22C86B1B60045F5ED /* HomeViewModel.swift */,
+				FC312BEA2C8735B00045F5ED /* LocationManager.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -216,8 +253,18 @@
 				FC312B632C86ADA10045F5ED /* RessetPassword.swift */,
 				FC312B652C86ADB00045F5ED /* SignUp.swift */,
 				FC312B672C86ADB80045F5ED /* Home.swift */,
+				FC312BEE2C888E380045F5ED /* SearchMap.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		FC312BDD2C86FC170045F5ED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC312BE22C86FC390045F5ED /* SwiftyJSON.xcframework */,
+				FC312BDE2C86FC170045F5ED /* Alamofire.xcframework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +277,7 @@
 				FC09F1CC2C869D41005D4FF7 /* Sources */,
 				FC09F1CD2C869D41005D4FF7 /* Frameworks */,
 				FC09F1CE2C869D41005D4FF7 /* Resources */,
+				FC312BE12C86FC170045F5ED /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -348,15 +396,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC09F1E92C869FEB005D4FF7 /* AppConstant.swift in Sources */,
+				FC312BD32C86B1B60045F5ED /* HomeViewModel.swift in Sources */,
 				FC09F1D42C869D41005D4FF7 /* GurumemoApp.swift in Sources */,
 				FC312B682C86ADB80045F5ED /* Home.swift in Sources */,
 				FC09F1E72C869F8A005D4FF7 /* Login.swift in Sources */,
 				FC312B5C2C86AD370045F5ED /* LoginViewModel.swift in Sources */,
 				FC312B5E2C86AD460045F5ED /* SignUpViewModel.swift in Sources */,
 				FC312B602C86AD5A0045F5ED /* RessetPasswordViewModel.swift in Sources */,
+				FC312BEF2C888E380045F5ED /* SearchMap.swift in Sources */,
+				FC312BE62C8710770045F5ED /* HomeModel.swift in Sources */,
 				FC09F1EB2C86A01F005D4FF7 /* APIClient.swift in Sources */,
 				FC312B662C86ADB00045F5ED /* SignUp.swift in Sources */,
 				FC312B642C86ADA10045F5ED /* RessetPassword.swift in Sources */,
+				FC312BEB2C8735B00045F5ED /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,6 +545,7 @@
 				DEVELOPMENT_TEAM = P97LMAHA9N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Gurumemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -522,6 +575,7 @@
 				DEVELOPMENT_TEAM = P97LMAHA9N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Gurumemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
