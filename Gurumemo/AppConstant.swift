@@ -29,5 +29,10 @@ struct AppConstant {
   static let promptLogout = "ログアウトしますか？"
   static let yesButton = "はい"
   static let noButton = "いいえ"
+  static let creditCardTitle = "クレジットカード"
+  static let budgetTitle = "予算"
+  static let wifiTitle = "Wi-Fiの有無"
+  static let freeDrinkTitle = "飲み放題"
+  static let freeFoodTitle = "食べ放題"
   
 }

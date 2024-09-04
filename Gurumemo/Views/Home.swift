@@ -34,9 +34,9 @@ struct Home: View {
             )
           
           VStack(alignment: .leading) {
-            Text("クレジットカード")
+            Text(AppConstant.creditCardTitle)
               .font(.headline)
-            Picker("クレジットカード", selection: $homeViewModel.selectedCreditCard) {
+            Picker(AppConstant.creditCardTitle, selection: $homeViewModel.selectedCreditCard) {
               ForEach(homeViewModel.creditCardOptions.keys.sorted(), id: \.self) { key in
                 Text(key)
               }
@@ -47,9 +47,9 @@ struct Home: View {
           }
           
           VStack(alignment: .leading) {
-            Text("予算")
+            Text(AppConstant.budgetTitle)
               .font(.headline)
-            Picker("予算", selection: $homeViewModel.selectedBudget) {
+            Picker(AppConstant.budgetTitle, selection: $homeViewModel.selectedBudget) {
               ForEach(homeViewModel.budgetOptions.keys.sorted(), id: \.self) { key in
                 Text(key)
               }
@@ -60,9 +60,9 @@ struct Home: View {
           }
           
           VStack(alignment: .leading) {
-            Text("Wi-Fiの有無")
+            Text(AppConstant.wifiTitle)
               .font(.headline)
-            Picker("Wi-Fi", selection: $homeViewModel.selectedWifi) {
+            Picker(AppConstant.wifiTitle, selection: $homeViewModel.selectedWifi) {
               ForEach(homeViewModel.wifiOptions.keys.sorted(), id: \.self) { key in
                 Text(key)
               }
@@ -72,9 +72,9 @@ struct Home: View {
           }
           
           VStack(alignment: .leading) {
-            Text("飲み放題")
+            Text(AppConstant.freeDrinkTitle)
               .font(.headline)
-            Picker("飲み放題", selection: $homeViewModel.selectedFreeDrink) {
+            Picker(AppConstant.freeDrinkTitle, selection: $homeViewModel.selectedFreeDrink) {
               ForEach(homeViewModel.freeDrinkOptions.keys.sorted(), id: \.self) { key in
                 Text(key)
               }
@@ -84,9 +84,9 @@ struct Home: View {
           }
           
           VStack(alignment: .leading) {
-            Text("食べ放題")
+            Text(AppConstant.freeFoodTitle)
               .font(.headline)
-            Picker("食べ放題", selection: $homeViewModel.selectedFreeFood) {
+            Picker(AppConstant.freeFoodTitle, selection: $homeViewModel.selectedFreeFood) {
               ForEach(homeViewModel.freeFoodOptions.keys.sorted(), id: \.self) { key in
                 Text(key)
               }
