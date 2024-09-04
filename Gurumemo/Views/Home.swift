@@ -37,8 +37,8 @@ struct Home: View {
             Text("クレジットカード")
               .font(.headline)
             Picker("クレジットカード", selection: $homeViewModel.selectedCreditCard) {
-              ForEach(homeViewModel.creditCardOptions, id: \.self) {
-                Text($0)
+              ForEach(homeViewModel.creditCardOptions.keys.sorted(), id: \.self) { key in
+                Text(key)
               }
             }
             .pickerStyle(MenuPickerStyle())
@@ -50,8 +50,8 @@ struct Home: View {
             Text("予算")
               .font(.headline)
             Picker("予算", selection: $homeViewModel.selectedBudget) {
-              ForEach(homeViewModel.budgetOptions, id: \.self) {
-                Text($0)
+              ForEach(homeViewModel.budgetOptions.keys.sorted(), id: \.self) { key in
+                Text(key)
               }
             }
             .pickerStyle(MenuPickerStyle())
@@ -63,8 +63,8 @@ struct Home: View {
             Text("Wi-Fiの有無")
               .font(.headline)
             Picker("Wi-Fi", selection: $homeViewModel.selectedWifi) {
-              ForEach(homeViewModel.wifiOptions, id: \.self) {
-                Text($0)
+              ForEach(homeViewModel.wifiOptions.keys.sorted(), id: \.self) { key in
+                Text(key)
               }
             }
             .pickerStyle(SegmentedPickerStyle())
@@ -75,8 +75,8 @@ struct Home: View {
             Text("飲み放題")
               .font(.headline)
             Picker("飲み放題", selection: $homeViewModel.selectedFreeDrink) {
-              ForEach(homeViewModel.freeDrinkOptions, id: \.self) {
-                Text($0)
+              ForEach(homeViewModel.freeDrinkOptions.keys.sorted(), id: \.self) { key in
+                Text(key)
               }
             }
             .pickerStyle(SegmentedPickerStyle())
@@ -87,8 +87,8 @@ struct Home: View {
             Text("食べ放題")
               .font(.headline)
             Picker("食べ放題", selection: $homeViewModel.selectedFreeFood) {
-              ForEach(homeViewModel.freeFoodOptions, id: \.self) {
-                Text($0)
+              ForEach(homeViewModel.freeFoodOptions.keys.sorted(), id: \.self) { key in
+                Text(key)
               }
             }
             .pickerStyle(SegmentedPickerStyle())
@@ -123,15 +123,9 @@ struct Home: View {
       .onAppear {
         homeViewModel.isLoading = true
       }
-      NavigationLink(
-        destination: Login().toolbar(.hidden),
-        isActive: Binding(
-          get: { homeViewModel.isLogout },
-          set: { homeViewModel.isLogout = $0 }
-        ),
-        label: {
-          EmptyView()
-        })
+      .navigationDestination(isPresented: $homeViewModel.isLogout) {
+        Login().toolbar(.hidden)
+      }
     }
   }
 }
