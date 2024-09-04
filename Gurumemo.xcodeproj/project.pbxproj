@@ -78,6 +78,7 @@
 		FC312BE42C86FC390045F5ED /* SwiftyJSON.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FC312BE22C86FC390045F5ED /* SwiftyJSON.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FC312BE62C8710770045F5ED /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC312BE52C8710770045F5ED /* HomeModel.swift */; };
 		FC312BEB2C8735B00045F5ED /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC312BEA2C8735B00045F5ED /* LocationManager.swift */; };
+		FC312BEF2C888E380045F5ED /* SearchMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC312BEE2C888E380045F5ED /* SearchMap.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -116,6 +117,7 @@
 		FC312BE52C8710770045F5ED /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		FC312BE92C8734A20045F5ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		FC312BEA2C8735B00045F5ED /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		FC312BEE2C888E380045F5ED /* SearchMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMap.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,6 +253,7 @@
 				FC312B632C86ADA10045F5ED /* RessetPassword.swift */,
 				FC312B652C86ADB00045F5ED /* SignUp.swift */,
 				FC312B672C86ADB80045F5ED /* Home.swift */,
+				FC312BEE2C888E380045F5ED /* SearchMap.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -400,6 +403,7 @@
 				FC312B5C2C86AD370045F5ED /* LoginViewModel.swift in Sources */,
 				FC312B5E2C86AD460045F5ED /* SignUpViewModel.swift in Sources */,
 				FC312B602C86AD5A0045F5ED /* RessetPasswordViewModel.swift in Sources */,
+				FC312BEF2C888E380045F5ED /* SearchMap.swift in Sources */,
 				FC312BE62C8710770045F5ED /* HomeModel.swift in Sources */,
 				FC09F1EB2C86A01F005D4FF7 /* APIClient.swift in Sources */,
 				FC312B662C86ADB00045F5ED /* SignUp.swift in Sources */,
