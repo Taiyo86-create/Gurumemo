@@ -11,7 +11,6 @@ import MapKit
 struct Home: View {
   @State var showLogoutAlert: Bool = false
   @StateObject var homeViewModel = HomeViewModel()
-  @StateObject var locationManager = LocationManager()
   var body: some View {
     NavigationStack {
       VStack {
@@ -34,13 +33,7 @@ struct Home: View {
                 .stroke(Color.gray, lineWidth: 1)
             )
           
-          Text(AppConstant.whereEat)
           
-          Map(coordinateRegion: locationManager.region,
-              showsUserLocation: true,
-              userTrackingMode: $trackingMode
-          )
-            .frame(height: 300)
           
           Button {
             homeViewModel.loadShop()
@@ -54,35 +47,6 @@ struct Home: View {
           }
         }
         .padding()
-        if homeViewModel.isloading {
-          ScrollView {
-            ForEach(homeViewModel.homeModel.names.indices, id: \.self) { index in
-              VStack(alignment: .leading) {
-                Text(homeViewModel.homeModel.names[index])
-                  .font(.headline)
-                Text(homeViewModel.homeModel.addresses[index])
-                  .font(.subheadline)
-                AsyncImage(url: URL(string: homeViewModel.homeModel.imageUrls[index])) { image in
-                  image.resizable()
-                    .scaledToFit()
-                    .frame(width: 150)
-                    .frame(height: 150)
-                } placeholder: {
-                }
-              }
-              .padding()
-              .frame(maxWidth: .infinity)
-              .overlay(
-                RoundedRectangle(cornerRadius: 8)
-                  .stroke(Color.gray, lineWidth: 1)
-              )
-            }
-          }
-        } else {
-          ProgressView()
-            .progressViewStyle(CircularProgressViewStyle())
-            .tint(.blue)
-        }
         Spacer()
       }
       .alert(isPresented: $showLogoutAlert) {
