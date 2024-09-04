@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-import SwiftUI
-
 struct Home: View {
   @State var showLogoutAlert: Bool = false
   @StateObject var homeViewModel = HomeViewModel()
@@ -28,7 +26,6 @@ struct Home: View {
         }
         
         VStack(spacing: 20) {
-          // ジャンルの入力フィールド
           TextField(AppConstant.wantEat, text: $homeViewModel.genre)
             .padding()
             .overlay(
@@ -36,7 +33,6 @@ struct Home: View {
                 .stroke(Color.gray, lineWidth: 1)
             )
           
-          // クレジットカードの選択
           VStack(alignment: .leading) {
             Text("クレジットカード")
               .font(.headline)
@@ -50,7 +46,6 @@ struct Home: View {
             .background(RoundedRectangle(cornerRadius: 8).stroke(Color.gray, lineWidth: 1))
           }
           
-          // 予算の選択
           VStack(alignment: .leading) {
             Text("予算")
               .font(.headline)
@@ -64,7 +59,6 @@ struct Home: View {
             .background(RoundedRectangle(cornerRadius: 8).stroke(Color.gray, lineWidth: 1))
           }
           
-          // Wi-Fiの選択
           VStack(alignment: .leading) {
             Text("Wi-Fiの有無")
               .font(.headline)
@@ -77,7 +71,6 @@ struct Home: View {
             .padding()
           }
           
-          // 飲み放題の選択
           VStack(alignment: .leading) {
             Text("飲み放題")
               .font(.headline)
@@ -90,7 +83,6 @@ struct Home: View {
             .padding()
           }
           
-          // 食べ放題の選択
           VStack(alignment: .leading) {
             Text("食べ放題")
               .font(.headline)
@@ -103,7 +95,6 @@ struct Home: View {
             .padding()
           }
           
-          // 検索ボタン
           Button {
             homeViewModel.loadShop()
           } label: {
