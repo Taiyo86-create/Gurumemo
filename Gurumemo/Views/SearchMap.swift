@@ -6,13 +6,16 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct SearchMap: View {
+  @ObservedObject var manager = LocationManager()
+  @State var trackingMode = MapUserTrackingMode.follow
     var body: some View {
-        Text("Map画面です")
+      Map(coordinateRegion: $manager.region,
+          showsUserLocation: true,
+          userTrackingMode: $trackingMode
+      )
+      .edgesIgnoringSafeArea(.bottom)
     }
-}
-
-#Preview {
-    SearchMap()
 }
