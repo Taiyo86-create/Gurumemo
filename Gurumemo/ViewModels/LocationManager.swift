@@ -25,6 +25,7 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
       let center = CLLocationCoordinate2D(
         latitude: $0.coordinate.latitude, longitude: $0.coordinate.longitude
       )
+      
       region = MKCoordinateRegion(
         center: center,
         latitudinalMeters: 100.0,

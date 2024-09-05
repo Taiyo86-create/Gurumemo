@@ -12,10 +12,15 @@ struct SearchMap: View {
   @ObservedObject var manager = LocationManager()
   @State var trackingMode = MapUserTrackingMode.follow
     var body: some View {
-      Map(coordinateRegion: $manager.region,
-          showsUserLocation: true,
-          userTrackingMode: $trackingMode
-      )
-      .edgesIgnoringSafeArea(.bottom)
+      VStack {
+        Map(coordinateRegion: $manager.region,
+            showsUserLocation: true,
+            userTrackingMode: $trackingMode
+        )
+        .frame(height: UIScreen.main.bounds.height * 0.6)
+        .edgesIgnoringSafeArea(.bottom)
+        
+        Spacer()
+      }
     }
 }
