@@ -34,3 +34,9 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     }
   }
 }
+
+
+struct Location: Identifiable {
+  let id = UUID()
+  let coordinate: CLLocationCoordinate2D
+}
