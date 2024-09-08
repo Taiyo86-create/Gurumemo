@@ -35,4 +35,7 @@ struct AppConstant {
   static let freeDrinkTitle = "飲み放題"
   static let freeFoodTitle = "食べ放題"
   static let linkSerchMap = "どのへん？"
+  
+  //  Search画面の固定文言
+  static let saveRangeButton = "このへん！"
 }

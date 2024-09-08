@@ -77,6 +77,10 @@
 		FC312BEF2C888E380045F5ED /* SearchMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC312BEE2C888E380045F5ED /* SearchMap.swift */; };
 		FC778F2C2C8D990400781178 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = FC778F2B2C8D990400781178 /* SwiftyJSON */; };
 		FC778F2F2C8D992300781178 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FC778F2E2C8D992300781178 /* Alamofire */; };
+		FC778F382C8DA2B400781178 /* SerchMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC778F372C8DA2B400781178 /* SerchMapViewModel.swift */; };
+		FC778F3A2C8DA2CD00781178 /* SearchMapModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC778F392C8DA2CD00781178 /* SearchMapModel.swift */; };
+		FC778F3D2C8DA31500781178 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = FC778F3C2C8DA31500781178 /* Realm */; };
+		FC778F3F2C8DA31500781178 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FC778F3E2C8DA31500781178 /* RealmSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,6 +105,8 @@
 		FC312BE92C8734A20045F5ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		FC312BEA2C8735B00045F5ED /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		FC312BEE2C888E380045F5ED /* SearchMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMap.swift; sourceTree = "<group>"; };
+		FC778F372C8DA2B400781178 /* SerchMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerchMapViewModel.swift; sourceTree = "<group>"; };
+		FC778F392C8DA2CD00781178 /* SearchMapModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMapModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +122,7 @@
 				FC312B8F2C86AF6B0045F5ED /* FirebaseFunctions in Frameworks */,
 				FC312BD12C86AF890045F5ED /* FirebaseVertexAI-Preview in Frameworks */,
 				FC312B792C86AF6B0045F5ED /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
+				FC778F3F2C8DA31500781178 /* RealmSwift in Frameworks */,
 				FC312B732C86AE2D0045F5ED /* FirebaseAppDistribution-Beta in Frameworks */,
 				FC312BA72C86AF890045F5ED /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
 				FC312B8B2C86AF6B0045F5ED /* FirebaseFirestore in Frameworks */,
@@ -150,6 +157,7 @@
 				FC312BB72C86AF890045F5ED /* FirebaseDynamicLinks in Frameworks */,
 				FC312BBB2C86AF890045F5ED /* FirebaseFirestoreCombine-Community in Frameworks */,
 				FC312BA32C86AF6B0045F5ED /* FirebaseVertexAI-Preview in Frameworks */,
+				FC778F3D2C8DA31500781178 /* Realm in Frameworks */,
 				FC312BBF2C86AF890045F5ED /* FirebaseFunctionsCombine-Community in Frameworks */,
 				FC312BCB2C86AF890045F5ED /* FirebaseRemoteConfig in Frameworks */,
 				FC312B7B2C86AF6B0045F5ED /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
@@ -213,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				FC312BE52C8710770045F5ED /* HomeModel.swift */,
+				FC778F392C8DA2CD00781178 /* SearchMapModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -225,6 +234,7 @@
 				FC312B5F2C86AD5A0045F5ED /* RessetPasswordViewModel.swift */,
 				FC312BD22C86B1B60045F5ED /* HomeViewModel.swift */,
 				FC312BEA2C8735B00045F5ED /* LocationManager.swift */,
+				FC778F372C8DA2B400781178 /* SerchMapViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -320,6 +330,8 @@
 				FC312BD02C86AF890045F5ED /* FirebaseVertexAI-Preview */,
 				FC778F2B2C8D990400781178 /* SwiftyJSON */,
 				FC778F2E2C8D992300781178 /* Alamofire */,
+				FC778F3C2C8DA31500781178 /* Realm */,
+				FC778F3E2C8DA31500781178 /* RealmSwift */,
 			);
 			productName = Gurumemo;
 			productReference = FC09F1D02C869D41005D4FF7 /* Gurumemo.app */;
@@ -353,6 +365,7 @@
 				FC312B692C86AE2D0045F5ED /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				FC778F2A2C8D990400781178 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				FC778F2D2C8D992300781178 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				FC778F3B2C8DA31500781178 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = FC09F1D12C869D41005D4FF7 /* Products */;
 			projectDirPath = "";
@@ -381,9 +394,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC778F382C8DA2B400781178 /* SerchMapViewModel.swift in Sources */,
 				FC09F1E92C869FEB005D4FF7 /* AppConstant.swift in Sources */,
 				FC312BD32C86B1B60045F5ED /* HomeViewModel.swift in Sources */,
 				FC09F1D42C869D41005D4FF7 /* GurumemoApp.swift in Sources */,
+				FC778F3A2C8DA2CD00781178 /* SearchMapModel.swift in Sources */,
 				FC312B682C86ADB80045F5ED /* Home.swift in Sources */,
 				FC09F1E72C869F8A005D4FF7 /* Login.swift in Sources */,
 				FC312B5C2C86AD370045F5ED /* LoginViewModel.swift in Sources */,
@@ -626,6 +641,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 5.9.1;
+			};
+		};
+		FC778F3B2C8DA31500781178 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -895,6 +918,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FC778F2D2C8D992300781178 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		FC778F3C2C8DA31500781178 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FC778F3B2C8DA31500781178 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		FC778F3E2C8DA31500781178 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FC778F3B2C8DA31500781178 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
